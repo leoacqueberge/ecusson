@@ -1,0 +1,748 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		108DDF8E2DB6D0F10077DDE0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 108DDF8D2DB6D0F10077DDE0 /* WidgetKit.framework */; };
+		108DDF8F2DB6D0F10077DDE0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 100F05A12DB47160007A5960 /* SwiftUI.framework */; };
+		108DDFA02DB6D0F30077DDE0 /* EcussonWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 108DDF8C2DB6D0F10077DDE0 /* EcussonWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		100F057D2DB465DE007A5960 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100F05672DB465DD007A5960 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 100F056E2DB465DD007A5960;
+			remoteInfo = Ecu;
+		};
+		100F05872DB465DE007A5960 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100F05672DB465DD007A5960 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 100F056E2DB465DD007A5960;
+			remoteInfo = Ecu;
+		};
+		108DDF9E2DB6D0F30077DDE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 100F05672DB465DD007A5960 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 108DDF8B2DB6D0F10077DDE0;
+			remoteInfo = EcussonWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		100F05B82DB47161007A5960 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				108DDFA02DB6D0F30077DDE0 /* EcussonWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		100F056F2DB465DD007A5960 /* Ecusson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ecusson.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		100F057C2DB465DE007A5960 /* EcussonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcussonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		100F05862DB465DE007A5960 /* EcussonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EcussonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		100F05A12DB47160007A5960 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		108DDF8C2DB6D0F10077DDE0 /* EcussonWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EcussonWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		108DDF8D2DB6D0F10077DDE0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		108DDFA52DB6D1910077DDE0 /* EcussonWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcussonWidgetExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		108DDFA12DB6D0F30077DDE0 /* Exceptions for "EcussonWidget" folder in "EcussonWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 108DDF8B2DB6D0F10077DDE0 /* EcussonWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		100F05712DB465DD007A5960 /* Ecu */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Ecu;
+			sourceTree = "<group>";
+		};
+		100F057F2DB465DE007A5960 /* EcuTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EcuTests;
+			sourceTree = "<group>";
+		};
+		100F05892DB465DE007A5960 /* EcuUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = EcuUITests;
+			sourceTree = "<group>";
+		};
+		108DDF902DB6D0F10077DDE0 /* EcussonWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				108DDFA12DB6D0F30077DDE0 /* Exceptions for "EcussonWidget" folder in "EcussonWidgetExtension" target */,
+			);
+			path = EcussonWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		100F056C2DB465DD007A5960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100F05792DB465DE007A5960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100F05832DB465DE007A5960 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		108DDF892DB6D0F10077DDE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				108DDF8F2DB6D0F10077DDE0 /* SwiftUI.framework in Frameworks */,
+				108DDF8E2DB6D0F10077DDE0 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		100F05662DB465DD007A5960 = {
+			isa = PBXGroup;
+			children = (
+				108DDFA52DB6D1910077DDE0 /* EcussonWidgetExtension.entitlements */,
+				100F05712DB465DD007A5960 /* Ecu */,
+				100F057F2DB465DE007A5960 /* EcuTests */,
+				100F05892DB465DE007A5960 /* EcuUITests */,
+				108DDF902DB6D0F10077DDE0 /* EcussonWidget */,
+				100F059E2DB47160007A5960 /* Frameworks */,
+				100F05702DB465DD007A5960 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		100F05702DB465DD007A5960 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				100F056F2DB465DD007A5960 /* Ecusson.app */,
+				100F057C2DB465DE007A5960 /* EcussonTests.xctest */,
+				100F05862DB465DE007A5960 /* EcussonUITests.xctest */,
+				108DDF8C2DB6D0F10077DDE0 /* EcussonWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		100F059E2DB47160007A5960 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				100F05A12DB47160007A5960 /* SwiftUI.framework */,
+				108DDF8D2DB6D0F10077DDE0 /* WidgetKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		100F056E2DB465DD007A5960 /* Ecusson */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100F05902DB465DE007A5960 /* Build configuration list for PBXNativeTarget "Ecusson" */;
+			buildPhases = (
+				100F056B2DB465DD007A5960 /* Sources */,
+				100F056C2DB465DD007A5960 /* Frameworks */,
+				100F056D2DB465DD007A5960 /* Resources */,
+				100F05B82DB47161007A5960 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				108DDF9F2DB6D0F30077DDE0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				100F05712DB465DD007A5960 /* Ecu */,
+			);
+			name = Ecusson;
+			packageProductDependencies = (
+			);
+			productName = Ecu;
+			productReference = 100F056F2DB465DD007A5960 /* Ecusson.app */;
+			productType = "com.apple.product-type.application";
+		};
+		100F057B2DB465DE007A5960 /* EcussonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100F05932DB465DE007A5960 /* Build configuration list for PBXNativeTarget "EcussonTests" */;
+			buildPhases = (
+				100F05782DB465DE007A5960 /* Sources */,
+				100F05792DB465DE007A5960 /* Frameworks */,
+				100F057A2DB465DE007A5960 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				100F057E2DB465DE007A5960 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				100F057F2DB465DE007A5960 /* EcuTests */,
+			);
+			name = EcussonTests;
+			packageProductDependencies = (
+			);
+			productName = EcuTests;
+			productReference = 100F057C2DB465DE007A5960 /* EcussonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		100F05852DB465DE007A5960 /* EcussonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100F05962DB465DE007A5960 /* Build configuration list for PBXNativeTarget "EcussonUITests" */;
+			buildPhases = (
+				100F05822DB465DE007A5960 /* Sources */,
+				100F05832DB465DE007A5960 /* Frameworks */,
+				100F05842DB465DE007A5960 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				100F05882DB465DE007A5960 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				100F05892DB465DE007A5960 /* EcuUITests */,
+			);
+			name = EcussonUITests;
+			packageProductDependencies = (
+			);
+			productName = EcuUITests;
+			productReference = 100F05862DB465DE007A5960 /* EcussonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		108DDF8B2DB6D0F10077DDE0 /* EcussonWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 108DDFA22DB6D0F30077DDE0 /* Build configuration list for PBXNativeTarget "EcussonWidgetExtension" */;
+			buildPhases = (
+				108DDF882DB6D0F10077DDE0 /* Sources */,
+				108DDF892DB6D0F10077DDE0 /* Frameworks */,
+				108DDF8A2DB6D0F10077DDE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				108DDF902DB6D0F10077DDE0 /* EcussonWidget */,
+			);
+			name = EcussonWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = EcussonWidgetExtension;
+			productReference = 108DDF8C2DB6D0F10077DDE0 /* EcussonWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		100F05672DB465DD007A5960 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					100F056E2DB465DD007A5960 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					100F057B2DB465DE007A5960 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 100F056E2DB465DD007A5960;
+					};
+					100F05852DB465DE007A5960 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = 100F056E2DB465DD007A5960;
+					};
+					108DDF8B2DB6D0F10077DDE0 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+				};
+			};
+			buildConfigurationList = 100F056A2DB465DD007A5960 /* Build configuration list for PBXProject "Ecusson" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 100F05662DB465DD007A5960;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 100F05702DB465DD007A5960 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				100F056E2DB465DD007A5960 /* Ecusson */,
+				100F057B2DB465DE007A5960 /* EcussonTests */,
+				100F05852DB465DE007A5960 /* EcussonUITests */,
+				108DDF8B2DB6D0F10077DDE0 /* EcussonWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		100F056D2DB465DD007A5960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100F057A2DB465DE007A5960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100F05842DB465DE007A5960 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		108DDF8A2DB6D0F10077DDE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		100F056B2DB465DD007A5960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100F05782DB465DE007A5960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		100F05822DB465DE007A5960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		108DDF882DB6D0F10077DDE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		100F057E2DB465DE007A5960 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100F056E2DB465DD007A5960 /* Ecusson */;
+			targetProxy = 100F057D2DB465DE007A5960 /* PBXContainerItemProxy */;
+		};
+		100F05882DB465DE007A5960 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 100F056E2DB465DD007A5960 /* Ecusson */;
+			targetProxy = 100F05872DB465DE007A5960 /* PBXContainerItemProxy */;
+		};
+		108DDF9F2DB6D0F30077DDE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 108DDF8B2DB6D0F10077DDE0 /* EcussonWidgetExtension */;
+			targetProxy = 108DDF9E2DB6D0F30077DDE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		100F058E2DB465DE007A5960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = MM5JA7C7F4;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		100F058F2DB465DE007A5960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = MM5JA7C7F4;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		100F05912DB465DE007A5960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Ecu/Ecu.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MM5JA7C7F4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leoacqueberge.Ecu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		100F05922DB465DE007A5960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Ecu/Ecu.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MM5JA7C7F4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leoacqueberge.Ecu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		100F05942DB465DE007A5960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MM5JA7C7F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leoacqueberge.EcuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ecusson.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ecusson";
+			};
+			name = Debug;
+		};
+		100F05952DB465DE007A5960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MM5JA7C7F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leoacqueberge.EcuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ecusson.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ecusson";
+			};
+			name = Release;
+		};
+		100F05972DB465DE007A5960 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MM5JA7C7F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leoacqueberge.EcuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ecu;
+			};
+			name = Debug;
+		};
+		100F05982DB465DE007A5960 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MM5JA7C7F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leoacqueberge.EcuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ecu;
+			};
+			name = Release;
+		};
+		108DDFA32DB6D0F30077DDE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = EcussonWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MM5JA7C7F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EcussonWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EcussonWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leoacqueberge.Ecu.EcussonWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		108DDFA42DB6D0F30077DDE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = EcussonWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MM5JA7C7F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EcussonWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EcussonWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.leoacqueberge.Ecu.EcussonWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		100F056A2DB465DD007A5960 /* Build configuration list for PBXProject "Ecusson" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100F058E2DB465DE007A5960 /* Debug */,
+				100F058F2DB465DE007A5960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100F05902DB465DE007A5960 /* Build configuration list for PBXNativeTarget "Ecusson" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100F05912DB465DE007A5960 /* Debug */,
+				100F05922DB465DE007A5960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100F05932DB465DE007A5960 /* Build configuration list for PBXNativeTarget "EcussonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100F05942DB465DE007A5960 /* Debug */,
+				100F05952DB465DE007A5960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		100F05962DB465DE007A5960 /* Build configuration list for PBXNativeTarget "EcussonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100F05972DB465DE007A5960 /* Debug */,
+				100F05982DB465DE007A5960 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		108DDFA22DB6D0F30077DDE0 /* Build configuration list for PBXNativeTarget "EcussonWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				108DDFA32DB6D0F30077DDE0 /* Debug */,
+				108DDFA42DB6D0F30077DDE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 100F05672DB465DD007A5960 /* Project object */;
+}
