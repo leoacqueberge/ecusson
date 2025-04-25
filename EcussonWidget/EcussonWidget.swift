@@ -163,7 +163,7 @@ struct SpendWidgetView: View {
                 AmountBlock(title: "Today", value: amountToday, systemImage: "star.fill")
 
                 Divider()
-                    .background(Color("SectionSeparator"))
+                    .background(Color("Divider"))
                     .padding(.vertical, 0)
 
                 AmountBlock(title: "Last 28 Days", value: sum28, systemImage: nil)

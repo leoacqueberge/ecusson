@@ -6,6 +6,7 @@ struct EcussonApp: App {
         WindowGroup {
             NavigationStack {
                 ContentView()
+                    .modelContainer(for: Expense.self)
             }
         }
     }

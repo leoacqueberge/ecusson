@@ -1,14 +1,24 @@
 import SwiftUI
 import ActivityKit
 import WidgetKit
-@available(iOS 16.1, *)
+import UIKit
+import CloudKit
+import SwiftData
 struct SpendAttributes: ActivityAttributes {
     struct ContentState: Codable, Hashable {
         var today: Int
     }
 }
-import UIKit
-import CloudKit
+
+@Model
+final class Expense {
+    var date: Date
+    var amount: Int
+    init(date: Date = .now, amount: Int) {
+        self.date = date
+        self.amount = amount
+    }
+}
 
 extension Color {
     init(hex: String) {
@@ -35,7 +45,7 @@ struct TitleStyle: ViewModifier {
 struct AmountStyle: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.system(size: UIFont.preferredFont(forTextStyle: .title1).pointSize + 4, weight: .bold, design: .rounded))
+            .font(.system(size: UIFont.preferredFont(forTextStyle: .title1).pointSize + 4, weight: .semibold, design: .rounded))
             .foregroundColor(.primary)
     }
 }
@@ -158,15 +168,6 @@ private struct FloatingMenu: View {
                     // Small visual rotation while dragging
                     .rotationEffect(.degrees(Double(dragOffset) / -4))
             }
-            // Horizontal left swipe → −1 (keeps previous behaviour)
-            .simultaneousGesture(
-                DragGesture(minimumDistance: 0).onEnded { value in
-                    if value.translation.width < -20 && abs(value.translation.height) < 20 {
-                        addAmount(-1)
-                        triggerHaptic()
-                    }
-                }
-            )
             // Long‑press + vertical drag gesture
             .gesture(longPressDrag)
             .buttonStyle(NoOpacityButtonStyle())
@@ -180,9 +181,9 @@ private struct FloatingMenu: View {
 
 
 struct ContentView: View {
-    @State private var amountToday: Int = 0
-    @State private var history: [String: Int] = [:]
     @State private var showSettings = false
+    @Environment(\.modelContext) private var modelContext
+    @Query(sort: \Expense.date, order: .reverse) private var expenses: [Expense]
 
     private var currentDate: Date { Date() }
 
@@ -196,46 +197,51 @@ struct ContentView: View {
         dateFormatter.string(from: currentDate)
     }
 
+    /// Sum of all expenses dated today
+    private var amountToday: Int {
+        expenses
+            .filter { Calendar.current.isDate($0.date, inSameDayAs: currentDate) }
+            .reduce(0) { $0 + $1.amount }
+    }
+
     private func addAmount(_ value: Int) {
         withAnimation(.easeInOut) {
-            history[todayDate, default: 0] += value
-            amountToday = history[todayDate] ?? 0
+            modelContext.insert(Expense(date: Date(), amount: value))
+            try? modelContext.save()
         }
 
-        let sharedDefaults = UserDefaults(suiteName: appGroupID)!
-        sharedDefaults.set(history, forKey: "history")
         WidgetCenter.shared.reloadTimelines(ofKind: "EcussonWidget")
 
-        // Start / refresh Live Activity with today's amount
+        // Live Activity refresh with today's total
+        let todaysTotal = amountToday
         if #available(iOS 16.1, *) {
             let attr = SpendAttributes()
             if #available(iOS 16.2, *) {
-                let content = ActivityContent(state: SpendAttributes.ContentState(today: amountToday),
+                let content = ActivityContent(state: SpendAttributes.ContentState(today: todaysTotal),
                                               staleDate: nil)
                 _ = try? Activity.request(attributes: attr,
                                           content: content,
                                           pushType: nil)
             } else {
-                // iOS 16.1 fallback (deprecated API)
                 _ = try? Activity.request(attributes: attr,
-                                          contentState: .init(today: amountToday),
+                                          contentState: .init(today: todaysTotal),
                                           pushType: nil)
             }
         }
     }
 
     private func sum(days: Int) -> Int {
-        (0..<days).compactMap { offset in
-            let date = Calendar.current.date(byAdding: .day, value: -offset, to: currentDate)!
-            let key = dateFormatter.string(from: date)
-            return history[key]
-        }.reduce(0, +)
+        let start = Calendar.current.date(byAdding: .day, value: -(days - 1), to: currentDate)!
+        return expenses
+            .filter { $0.date >= start }
+            .reduce(0) { $0 + $1.amount }
     }
 
     private func sumSinceStartOfYear() -> Int {
-        let start = Calendar.current.date(from: Calendar.current.dateComponents([.year], from: currentDate))!
-        let days = Calendar.current.dateComponents([.day], from: start, to: currentDate).day ?? 0
-        return sum(days: days + 1)
+        let startOfYear = Calendar.current.date(from: Calendar.current.dateComponents([.year], from: currentDate))!
+        return expenses
+            .filter { $0.date >= startOfYear }
+            .reduce(0) { $0 + $1.amount }
     }
 
     private func triggerHaptic() {
@@ -243,38 +249,22 @@ struct ContentView: View {
         generator.impactOccurred()
     }
 
-    private func loadHistory() {
-        let sharedDefaults = UserDefaults(suiteName: appGroupID)!
-        if let saved = sharedDefaults.dictionary(forKey: "history") as? [String: Int] {
-            history = saved
-        } else {
-            history = [:]
-        }
-        amountToday = history[todayDate] ?? 0
-    }
-
     var body: some View {
         ZStack {
             ScrollView {
-                VStack(spacing: 0) {
+                VStack {
                     AmountBlock(title: "Today", value: amountToday, systemImage: "star.fill")
 
-                    Rectangle()
-                        .fill(Color("SectionSeparator"))
-                        .frame(height: 1)
-                        .cornerRadius(0.5)
-                        .padding(.vertical, 10)
-                        .padding(.horizontal)
+                    Divider()
+                        .background(Color("Divider"))
+                        .padding(.vertical, 5)
 
                     AmountBlock(title: "Last 28 Days", value: sum(days: 28), systemImage: nil)
                         .animation(.easeInOut, value: sum(days: 28))
 
-                    Rectangle()
-                        .fill(Color("SectionSeparator"))
-                        .frame(height: 1)
-                        .cornerRadius(0.5)
-                        .padding(.vertical, 10)
-                        .padding(.horizontal)
+                    Divider()
+                        .background(Color("Divider"))
+                        .padding(.vertical, 5)
 
                     AmountBlock(title: "Since January 1", value: sumSinceStartOfYear(), systemImage: nil)
                         .animation(.easeInOut, value: sumSinceStartOfYear())
@@ -312,7 +302,6 @@ struct ContentView: View {
         .background(Color("BackgroundColor"))
         .onAppear {
             DispatchQueue.main.async {
-                loadHistory()
 
                 let center = UNUserNotificationCenter.current()
                 center.getPendingNotificationRequests { requests in
@@ -330,9 +319,6 @@ struct ContentView: View {
                     }
                 }
             }
-        }
-        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("HistoryImported"))) { _ in
-            loadHistory()
         }
         .sheet(isPresented: $showSettings) {
             SettingsView()
@@ -372,4 +358,5 @@ extension View {
 
 #Preview {
     ContentView()
+        .modelContainer(for: Expense.self)
 }
